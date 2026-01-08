@@ -20,6 +20,9 @@ Java 25 Features Proof of Concept
 ```batch
 # Run all feature tests
 run.bat
+
+# Run unit tests
+test.bat
 ```
 
 ### Using Maven Directly
@@ -29,4 +32,7 @@ mvn compile
 
 # Run feature tests
 mvn exec:java -Dexec.mainClass="com.example.Java25Examples" -Dexec.args="--enable-preview -ea"
+
+# Run unit tests
+mvn test
 ```
