@@ -7,7 +7,6 @@ Java 25 Features Proof of Concept
 - **Primitive Types in Patterns** (Preview) - Pattern matching with primitive types
 - **Flexible Constructor Bodies** (Preview) - Enhanced constructor flexibility
 - **Module Import Declarations** (Preview) - Simplified module imports
-- **Stream Gatherers** (Preview) - Advanced stream processing operations
 
 ## Requirements
 
@@ -16,13 +15,17 @@ Java 25 Features Proof of Concept
 
 ## Running the Examples
 
-### Using Batch Script (Windows)
-```batch
-# Run all feature tests
-run.bat
+### Using Scripts
+```powershell
+# PowerShell (recommended)
+.\run.ps1     # Run feature tests
+.\test.ps1    # Run unit tests
+```
 
-# Run unit tests
-test.bat
+```batch
+# Command Prompt
+run.bat       # Run feature tests
+test.bat      # Run unit tests
 ```
 
 ### Using Maven Directly
@@ -30,8 +33,8 @@ test.bat
 # Compile
 mvn compile
 
-# Run feature tests
-mvn exec:java -Dexec.mainClass="com.example.Java25Examples" -Dexec.args="--enable-preview -ea"
+# Run feature tests (simplified)
+mvn exec:java
 
 # Run unit tests
 mvn test

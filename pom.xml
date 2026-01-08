@@ -47,6 +47,18 @@
                     <argLine>--enable-preview</argLine>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.6.3</version>
+                <configuration>
+                    <mainClass>com.example.Java25Examples</mainClass>
+                    <options>
+                        <option>--enable-preview</option>
+                        <option>-ea</option>
+                    </options>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

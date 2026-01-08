@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.example.PrimitivePatternsTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! -- in com.example.PrimitivePatternsTest
+com.example.PrimitivePatternsTest.testOtherTypes -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:220)
+	at com.example.Java25Examples.checkNumber(Java25Examples.java:37)
+	at com.example.PrimitivePatternsTest.testOtherTypes(PrimitivePatternsTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

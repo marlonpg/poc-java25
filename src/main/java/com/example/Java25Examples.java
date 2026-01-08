@@ -15,7 +15,6 @@ public class Java25Examples {
         testPrimitivePatterns();
         testFlexibleConstructors();
         testModuleImports();
-        testStreamGatherers();
         
         System.out.println("\n=== All tests completed ===");
     }
@@ -109,34 +108,5 @@ public class Java25Examples {
         
         System.out.println("   ✓ Module imports work correctly");
         System.out.println("   ✓ Collections and Optional accessible");
-    }
-    
-    // Stream Gatherers (Preview)
-    static void testStreamGatherers() {
-        System.out.println("\n4. Testing Stream Gatherers:");
-        
-        // Fixed window gatherer
-        var windowed = Stream.of(1, 2, 3, 4, 5, 6)
-                .gather(Gatherer.windowFixed(3))
-                .toList();
-        assert 2 == windowed.size();
-        assert List.of(1, 2, 3).equals(windowed.get(0));
-        
-        // Sliding window gatherer
-        var sliding = Stream.of(1, 2, 3, 4)
-                .gather(Gatherer.windowSliding(2))
-                .toList();
-        assert 3 == sliding.size();
-        assert List.of(1, 2).equals(sliding.get(0));
-        
-        // Scan gatherer
-        var cumulative = Stream.of(1, 2, 3, 4)
-                .gather(Gatherer.scan(() -> 0, Integer::sum))
-                .toList();
-        assert List.of(0, 1, 3, 6, 10).equals(cumulative);
-        
-        System.out.println("   ✓ Fixed window gatherer works");
-        System.out.println("   ✓ Sliding window gatherer works");
-        System.out.println("   ✓ Scan gatherer works");
     }
 }
