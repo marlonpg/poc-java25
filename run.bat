@@ -6,7 +6,7 @@ echo Compiling Java 25 examples...
 mvn compile
 
 echo.
-echo Running all Java 25 examples...
-mvn exec:java -Dexec.mainClass="com.example.Java25Examples" -Dexec.args="--enable-preview"
+echo Running Java 25 feature tests...
+mvn exec:java -Dexec.mainClass="com.example.Java25Examples" -Dexec.args="--enable-preview -ea"
 
 pause

@@ -16,16 +16,10 @@ Java 25 Features Proof of Concept
 
 ## Running the Examples
 
-### Using Batch Scripts (Windows)
+### Using Batch Script (Windows)
 ```batch
-# Run all examples
+# Run all feature tests
 run.bat
-
-# Run individual examples
-run-example.bat PrimitivePatterns
-run-example.bat FlexibleConstructors
-run-example.bat ModuleImports
-run-example.bat StreamGatherers
 ```
 
 ### Using Maven Directly
@@ -33,12 +27,6 @@ run-example.bat StreamGatherers
 # Compile
 mvn compile
 
-# Run all examples
-mvn exec:java -Dexec.mainClass="com.example.Java25Examples" -Dexec.args="--enable-preview"
-
-# Run individual examples
-mvn exec:java -Dexec.mainClass="com.example.PrimitivePatterns" -Dexec.args="--enable-preview"
-mvn exec:java -Dexec.mainClass="com.example.FlexibleConstructors" -Dexec.args="--enable-preview"
-mvn exec:java -Dexec.mainClass="com.example.ModuleImports" -Dexec.args="--enable-preview"
-mvn exec:java -Dexec.mainClass="com.example.StreamGatherers" -Dexec.args="--enable-preview"
+# Run feature tests
+mvn exec:java -Dexec.mainClass="com.example.Java25Examples" -Dexec.args="--enable-preview -ea"
 ```
